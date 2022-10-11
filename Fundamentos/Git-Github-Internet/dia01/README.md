@@ -23,3 +23,4 @@ Acesse a branch adiciona-infos e utilize sua criatividade para escrever o passo 
 Adicione as alterações em staging, realize o commit;
 Volte para a branch atualiza-readme e realize o merge das alterações feitas na branch adiciona-infos;
 Retorne para a branch main e realize o merge das alterações.
+alteração
