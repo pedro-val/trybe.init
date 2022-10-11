@@ -1,3 +1,8 @@
 Internet
 Unix
 Bash
+Erros
+Linux
+Windows
+Software
+Programas
