@@ -1,4 +1,4 @@
-h1 {
+h1, h3 {
   text-align: center;
 }
 
@@ -32,4 +32,13 @@ h1 {
   margin-left: 200px;
   margin-top: -50px;
   
+}
+
+li {
+    display: block;
+    text-align: center;
+}
+
+.ul1 {
+    margin-left: 380px;
 }
