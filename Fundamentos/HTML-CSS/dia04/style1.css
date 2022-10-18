@@ -1,16 +1,15 @@
 .header {
-    width: 80%;
+    width: 70%;
     border: 2px;
     border-color: black;
     border-style: groove;
     text-align: center;
-    background-color: aquamarine;
+    background-color: rgb(13, 121, 31);
     font-size: x-large;
 }
 
 .nav {
     border: 2px;
-    width: 80%;
     border-color: black;
     border-style: groove;
     background-color: aquamarine;
@@ -33,27 +32,69 @@
 }
 
 .main {
-    width: 80%;
+    display: inline-block;
+    width: 70%;
     border: 2px;
     border-color: black;
     border-style: groove;
+    vertical-align: top;
 }
 
-.asside {
-    width: 20%;
-    position: absolute;
+.aside {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+       
+}
+
+.section-title {
+    font-size: xx-large;
+    background-color: rgb(13, 121, 31);
     border: 2px;
     border-color: black;
     border-style: groove;
-    margin-left: 1011px;    
-    float: right;
+    text-align: center;
 }
 
+.articles {
+    border: 2px;
+    border-color: black;
+    border-style: groove;
+    font-size: xx-large;
+    text-align: center;
+    background-color: chartreuse;
 
+}
+
+.infos {
+    border: 2px;
+    border-color: black;
+    border-style: groove;
+    font-size: medium;
+    background-color: aquamarine;
+}
 
 .footer {
-    width: 80%;
+    width: 70%;
     border: 2px;
     border-color: black;
     border-style: groove;
 }
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .embed-container iframe,
+  .embed-container object,
+  .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+  }
