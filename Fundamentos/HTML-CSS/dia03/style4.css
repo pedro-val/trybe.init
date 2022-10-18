@@ -1,0 +1,32 @@
+div:hover {
+    border: 5px;
+    border-style: dotted;
+    border-color: red;
+}
+
+#h31 {
+background-color: yellow;
+font-style: italic;
+}
+
+#h32 {
+background-color: rebeccapurple;
+}
+
+#h33 {
+background-color: aqua;
+font-style: italic;
+}
+
+#h34 {
+background-color: coral;
+}
+
+#h35 {
+background-color: darkorange;
+font-style: italic;
+}
+
+.div3 {
+font-size: xx-large;   
+}
