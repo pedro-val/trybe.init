@@ -1,0 +1,57 @@
+ol {
+    background-color: yellow;
+}
+
+li {
+    font-size: 20px;
+}
+
+#ol2, #ol4 {
+color: green;
+font-weight: bold;
+}
+
+#ol1, #ol3, #ol5 {
+text-transform: uppercase;
+font-weight: bold;
+}
+
+h1 {
+    color: red;
+    font-size: 40px;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+h3 {
+    color: red;
+}
+
+#ul1, #ul2, #ul3 {
+    color: blue;
+}
+
+#ul2, #ul3 {
+    background-color: pink;
+}
+
+#lk1:hover {
+    background-color: orange;
+}
+
+#lk2:hover {
+    background-color: green;
+}
+
+#lk3:hover {
+    background-color: black;
+}
+
+#lk4:hover {
+    background-color: yellow;
+}
+
+#lk5:hover {
+    background-color: green;
+}
