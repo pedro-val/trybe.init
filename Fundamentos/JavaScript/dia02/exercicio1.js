@@ -20,12 +20,21 @@
 //     }
 // }
 // console.log(maior);
+// let impares = []
+// for (let i = 0; i < num.length; i++) {
+//     if (num[i] % 2 !== 0){
+//     impares.push(num[i])
+//     }
+// }
+// // console.log(impares)
+// let num = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// let maior = num[0];
+// for (let i = 1; i < num.length ; i += 1) {
+//     if (num[i] < maior) {
+//         maior = num[i];
+//     }
+// }
+// console.log(maior);
+
 let num = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let impares = []
-for (let i = 0; i < num.length; i++) {
-    if (num[i] % 2 !== 0){
-    impares.push(num[i])
-    }
-}
-console.log(impares)
     
