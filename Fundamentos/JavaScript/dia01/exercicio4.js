@@ -1,4 +1,4 @@
-let salarioBruto = 3000
+let salarioBruto = 15000
 let salarioSemInss = null
 let aliquotaIr = null
 let aliquotaInss = null
@@ -27,7 +27,7 @@ let aliquotaInss = null
         } else if (salarioSemInss > 3751.05 && salarioSemInss <= 4664.68){
         aliquotaIr = (salarioSemInss * 0.225) - 636.13
         } else {    
-        aliquotaIr = 869.36 + (salarioSemInss * 0.275)
+        aliquotaIr = (salarioSemInss * 0.275) - 869.36
         }
     salarioLiquido = (salarioSemInss - aliquotaIr)
 }
