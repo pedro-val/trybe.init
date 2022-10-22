@@ -13,12 +13,19 @@
 //     soma = soma + numbers[i]
 // }
 // console.log(soma)
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let maior = numbers[0];
-for (let i = 1; i < numbers.lenght; i += 1) {
-    if (numbers[i] > maior) {
-        maior = numbers[i];
+// let maior = numbers[0];
+// for (let i = 1; i < numbers.length ; i += 1) {
+//     if (numbers[i] > maior) {
+//         maior = numbers[i];
+//     }
+// }
+// console.log(maior);
+let num = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let impares = []
+for (let i = 0; i < num.length; i++) {
+    if (num[i] % 2 !== 0){
+    impares.push(num[i])
     }
 }
-console.log(maior);
+console.log(impares)
     
