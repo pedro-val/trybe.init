@@ -36,5 +36,11 @@
 // }
 // console.log(maior);
 
-let num = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// let num = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+// let array = [];
+// for (let i = 0; i < 25; i++) {
+//     array.push(i)
+// }
+// console.log(array)
     
