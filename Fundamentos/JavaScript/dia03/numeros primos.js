@@ -5,7 +5,7 @@
 // }
 // console.log(num)
 
- let temp = [];
+let temp = [];
 for(let ind = 0; ind < num.length; ind++) {
     for (let index = num.length; index >= 0; index = index - 1) {
         if (num[ind] % num[index] == 0) {
