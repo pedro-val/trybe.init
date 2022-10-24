@@ -10,7 +10,7 @@
 let array = [];
 let impares = [];
 let por3 = [];
-for (index = 1; index <= 100; index += 2) {
+for (index = 1; index <= 700; index += 2) {
     array.push(index);
 }
 for (let index = 0; index < array.length; index++) {
@@ -18,4 +18,8 @@ for (let index = 0; index < array.length; index++) {
         por3.push(array[index])
     }
 }
-console.log(por3.length)
+if (por3.length >= 50) {
+    console.log('Há 50 ou mais números divisíveis por 3')
+} else {
+    console.log('Sequência muito pequena')
+}
