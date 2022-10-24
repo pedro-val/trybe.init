@@ -1,8 +1,15 @@
-let array = ['java', 'javascript', 'python', 'html', 'css'];
-let bigger = '0';
-for (let index = 0; index < array.length; index++) {
-    if ((bigger.length) < (array[index].length)) {
-        bigger = array[index];
-    }    
+let biggestPrimeNumber = 0;
+
+for (let currentNumber = 2; currentNumber <= 1000; currentNumber += 1) {
+  let isPrime = true;
+  for (let currentDivisor = 2; currentDivisor < currentNumber; currentDivisor += 1) {
+    if (currentNumber % currentDivisor === 0) {
+      isPrime = false;
+    }
+  }
+  if (isPrime) {
+    biggestPrimeNumber = currentNumber;
+  }
 }
-console.log(bigger)
+
+console.log(biggestPrimeNumber);
