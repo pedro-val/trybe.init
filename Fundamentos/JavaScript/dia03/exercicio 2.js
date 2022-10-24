@@ -1,7 +1,7 @@
 let array = ['java', 'javascript', 'python', 'html', 'css'];
-let bigger = '0';
+let bigger = 'java';
 for (let index = 0; index < array.length; index++) {
-    if ((bigger.length) < (array[index].length)) {
+    if ((bigger.length) > (array[index].length)) {
         bigger = array[index];
     }    
 }
