@@ -1,15 +1,14 @@
-let biggestPrimeNumber = 0;
+let primoM = 0
 
-for (let currentNumber = 2; currentNumber <= 50; currentNumber += 1) {
-  let isPrime = true;
-  for (let currentDivisor = 2; currentDivisor < currentNumber; currentDivisor += 1) {
-    if (currentNumber % currentDivisor === 0) {
-      isPrime = false;
+for (let dividido = 2; dividido <= 1000; dividido++) {
+  let isPrimo = true;
+  for (let divisor = 2; divisor < dividido; divisor++) {
+    if (dividido % divisor === 0) {
+      isPrimo = false;
     }
   }
-  if (isPrime) {
-    biggestPrimeNumber = currentNumber;
-  }
+  if (isPrimo) {
+  primoM = dividido
+  }  
 }
-
-console.log(biggestPrimeNumber);
+console.log(primoM)
