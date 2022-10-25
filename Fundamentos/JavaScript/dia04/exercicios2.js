@@ -14,5 +14,6 @@ let leitor = {
 leitor.livrosFavoritos.push({titulo: 'Harry Potter e o Prisioneiro de Azkaban',
 autor: 'JK Rowling',
 editora: 'Rocco',})
-console.log(leitor.livrosFavoritos[1])
-console.log('Júlia tem ' + leitor.livrosFavoritos.length + ' livros favoritos.')
+console.log(leitor.livrosFavoritos.join())
+// console.log(leitor.livrosFavoritos[1])
+// console.log('Júlia tem ' + leitor.livrosFavoritos.length + ' livros favoritos.')
