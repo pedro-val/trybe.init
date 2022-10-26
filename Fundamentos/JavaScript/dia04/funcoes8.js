@@ -17,9 +17,9 @@ function verificaFimPalavra(word, ending) {
     let booleano = true
     let reverseWord = word.split('').reverse();
     let reverseEnding = ending.split('').reverse();
-    for (i in reverseEnding) {      
+    for (i of reverseEnding) {      
         for (i2 = 0; i2 < reverseEnding.length; i2 += 1) {
-            if ( reverseEnding[i] === reverseWord[i2] ) {
+            if ( i === reverseWord[i2] ) {
                 booleano = true
             } else {
                 booleano = false

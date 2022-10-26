@@ -23,6 +23,6 @@ function arrayRepeat(array) {
         }
         biggerIndex = 0
     }
-    console.log(array[atualIndexRepeat])
+    console.log(biggerRepeat)
 }
-arrayRepeat([2, 3, 2, 5, 8, 2, 3])
+arrayRepeat([2, 3, 2, 5, 8, 8, 8, 8, 8, 8, 2, 3])
