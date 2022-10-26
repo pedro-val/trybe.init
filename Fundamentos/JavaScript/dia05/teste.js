@@ -1,8 +1,7 @@
-const frase = 'Antônio foi no banheiro e não sabemos o que aconteceu'
-let separado = frase.split(' ')
-let maior = '0'
-for (let i in separado){
-    let letras = separado[i].split('').length
-    if (separadomaior.length)
-    
-}
+const arr = [1,2,3,4,5,'foo','bar','baz']
+
+console.log(JSON.stringify(arr));
+console.log(JSON.stringify(arr, null, 2));
+console.log(arr.toString());
+console.log(`${arr}`);
+console.log(arr.join('\n'));

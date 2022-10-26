@@ -23,14 +23,13 @@
 
 substituaX = (nome) => {
     const frase = (`Tryber ${nome} aqui!`)
-    return frase
+    return console.log(frase)
 }
 
-minhasSkills = (asd) => {
+minhasSkills = () => {
     const skills = [`JavaScript`, `html`, `css`]
-    let frase1 = `${substituaX('Pedro')}
-minhas três principais habilidades são:
-${skills}`;
+    let frase1 = `Minhas três principais habilidades são:
+${skills.join(`\n`)}`;
     return frase1
 }
-console.log(minhasSkills())
+console.table(minhasSkills(substituaX('Pedro')))
