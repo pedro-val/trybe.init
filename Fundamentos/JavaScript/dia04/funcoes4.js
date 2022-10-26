@@ -11,14 +11,14 @@
 
 // biggestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'])
 
-let atual;
+
 function biggestName(array) {
-    atual = array[0]
+    let atual = array[0]
     for (let key in array) {
         if (array[key].length > atual.length) {
             atual = array[key]
         } 
     }    
+     return console.log(atual)
 }
 biggestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'])
-console.log(atual)
