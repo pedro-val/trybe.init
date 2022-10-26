@@ -14,5 +14,18 @@
 // let chars2 = ending.split('');
 
 function verificaFimPalavra(word, ending) {
-    if ()
+    let booleano = true
+    let reverseWord = word.split('').reverse();
+    let reverseEnding = ending.split('').reverse();
+    for (i in reverseEnding) {      
+        for (i2 = 0; i2 < reverseEnding.length; i2 += 1) {
+            if ( reverseEnding[i] === reverseWord[i2] ) {
+                booleano = true
+            } else {
+                booleano = false
+            }
+        }
+    }
+    return console.log(booleano)
 }
+verificaFimPalavra('pedromarconival', 'onsdsdival')
