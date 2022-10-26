@@ -21,15 +21,14 @@
 // HTML
 // CSS
 
-substituaX = (nome) => {
-    const frase = (`Tryber ${nome} aqui!`)
-    return console.log(frase)
+const substituaX = (nome) => {
+    const frase = (`Tryber ${nome} aqui!`);
+    return frase;
 }
 
-minhasSkills = () => {
-    const skills = [`JavaScript`, `html`, `css`]
-    let frase1 = `Minhas três principais habilidades são:
-${skills.join(`\n`)}`;
-    return frase1
+const minhasSkills = (xablau) => {
+    const skills = [`JavaScript`, `html`, `css`];
+    let frase1 = `${xablau}\nMinhas três principais habilidades são:\n${skills.join(`\n`)}`;
+    return frase1;
 }
-console.table(minhasSkills(substituaX('Pedro')))
+console.log(minhasSkills(substituaX('Pedro')));
