@@ -1,7 +1,6 @@
 function biggestName(array) {
     for (let index = 0; index < array.length; index++) {
-        return console.log('teste');
-        
+        console.log(array[index]);        
     }
 }
 biggestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']);
