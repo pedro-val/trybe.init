@@ -28,4 +28,4 @@ function verificaFimPalavra(word, ending) {
     }
     return console.log(booleano)
 }
-verificaFimPalavra('pedromarconival', 'onsdsdival')
+verificaFimPalavra('pedromarconival', 'al')
