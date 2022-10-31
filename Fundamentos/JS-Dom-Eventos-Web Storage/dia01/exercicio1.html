@@ -57,22 +57,32 @@
      function mudaTexto(texto) {
         return document.getElementsByTagName('p')[1].innerText = texto;
     }
-    function trybe(cor) {
-        return document.querySelector('.main-content').style.backgroundColor = cor;
+    mudaTexto('Novo texto alterado!');
+    function trybe() {
+        return document.querySelector('.main-content').style.backgroundColor = 'rgb(76,164,109)';
     }
+    trybe();
     function centerColor(cor) {
         return document.querySelector('section').style.backgroundColor = cor;
     }
+    centerColor('white');
     function correcaoH1(texto) {
         return document.querySelector('h1').innerText = texto;
     }
     function maiusculo() {
-        return document.getElementsByTagName('p')[0].style.textTransform.toUpperCase;
+        return document.querySelectorAll('.center-content p')[0].style.textTransform.toUpperCase();
     }
-    function con(p) {
-        let console = document.querySelectorAll(p);
-        return console;
+    maiusculo();
+    function con() {
+        for (let i = 0; i <= 2; i +=1) {
+          console.log(document.getElementsByTagName('p')[i].innerText);
+        }        
     }
+    con()
+    function correct(text) {
+      document.getElementsByTagName('h1')[0].innerText = text
+    }
+    correct('Exercício - JavaScript')
     </script>
   </body>
 </html>
