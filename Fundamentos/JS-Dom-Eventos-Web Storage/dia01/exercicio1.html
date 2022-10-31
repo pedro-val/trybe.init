@@ -70,7 +70,8 @@
         document.querySelector('h1').innerText = texto;
     }
     function maiusculo() {
-        document.querySelectorAll('.center-content p')[0].style.textTransform.toUpperCase();
+        let elemento = document.querySelectorAll('.center-content p')[0];
+        elemento.style.textTransform = 'uppercase';
     }
     maiusculo();
     function con() {
