@@ -55,22 +55,22 @@
       6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
       */
      function mudaTexto(texto) {
-        return document.getElementsByTagName('p')[1].innerText = texto;
+        document.getElementsByTagName('p')[1].innerText = texto;
     }
     mudaTexto('Novo texto alterado!');
     function trybe() {
-        return document.querySelector('.main-content').style.backgroundColor = 'rgb(76,164,109)';
+        document.querySelector('.main-content').style.backgroundColor = 'rgb(76,164,109)';
     }
     trybe();
     function centerColor(cor) {
-        return document.querySelector('section').style.backgroundColor = cor;
+        document.querySelector('section').style.backgroundColor = cor;
     }
     centerColor('white');
     function correcaoH1(texto) {
-        return document.querySelector('h1').innerText = texto;
+        document.querySelector('h1').innerText = texto;
     }
     function maiusculo() {
-        return document.querySelectorAll('.center-content p')[0].style.textTransform.toUpperCase();
+        document.querySelectorAll('.center-content p')[0].style.textTransform.toUpperCase();
     }
     maiusculo();
     function con() {
