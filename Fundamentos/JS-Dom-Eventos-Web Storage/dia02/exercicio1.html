@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+    background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+  </body>
+  <script>
+    const tagh1 = () => {
+        let tagBody = document.getElementsByTagName('body');
+        let h1 = document.createElement('h1');
+        h1.innerText = 'Exercício - JavaScript DOM';
+        tagBody[0].appendChild(h1);document.getElementsByClassName('center-content')
+    }
+    tagh1();
+
+    const tagMain = () => {
+        let tagBody = document.getElementsByTagName('body'); 
+        let main = document.createElement('main');
+        main.className = 'main-content';
+        tagBody[0].appendChild(main);
+    }
+    tagMain();
+
+    const section1 = () => {
+        let tagMain = document.getElementsByTagName('main');
+        let section1 = document.createElement('section');
+        section1.className = 'center-content';
+        tagMain[0].appendChild(section1);
+    }
+    section1();
+
+    const paragraph = () => {
+        let section = document.getElementsByTagName('section');
+        let p1 = document.createElement('p');
+        p1.innerText = 'Algum texto qualquer!!!!!!!!!';
+        section[0].appendChild(p1);
+    }
+    paragraph();
+
+    const section2 = () => {
+        let tagMain = document.getElementsByTagName('main');
+        let section2 = document.createElement('section');
+        section2.className = 'left-content';
+        tagMain[0].appendChild(section2);
+    }
+    section2();
+
+    const section3 = () => {
+        let tagMain = document.getElementsByTagName('main');
+        let section3 = document.createElement('section');
+        section3.className = 'right-content';
+        tagMain[0].appendChild(section3);
+        
+    }
+    section3();
+
+    const foto = () => {
+        let esquerda = document.getElementsByClassName('left-content');
+        let img = document.createElement('img');
+        img.src = 'https://picsum.photos/200';
+        img.className = 'small-image';
+        esquerda[0].appendChild(img);
+    }
+    foto();
+
+    const listaNaoOrdenada = () => {
+        let direita = document.getElementsByClassName('right-content');
+        let lista = document.createElement('ul');
+        lista.className = 'lista-n-ordenada';
+        direita[0].appendChild(lista);
+    }
+    listaNaoOrdenada();
+
+    const listaOrdenada = () => {
+        for (let index = 0; index <= 10; index++) {            
+            let ul = document.getElementsByClassName('lista-n-ordenada');
+            let listaOrdenada = document.createElement('li');
+            listaOrdenada.innerText = index;
+            ul[0].appendChild(listaOrdenada);
+        }
+    }
+    listaOrdenada();
+
+    const h3s = () => {
+        for (let i = 0; i < 3; i++) {
+        let tagMain = document.getElementsByTagName('main');
+        let h3 = document.createElement('h3');
+        tagMain[0].appendChild(h3);
+        }
+    }
+    h3s();
+
+    document.getElementsByTagName('h1').className = 'title';
+
+    const desc = () => {
+        let h3s = document.getElementsByTagName('h3');
+        for (let i = 0; i < 3; i++){
+            h3s[i].className = 'description';
+        }
+    }
+    desc();
+
+    const removeLeft = () => {
+        let tagMain = document.getElementsByTagName('main')[0];
+        let left = document.getElementsByClassName('left-content')
+        tagMain.removeChild(left[0]);
+    }
+    removeLeft();
+
+    const right = () => {
+        let rightContent = document.getElementsByClassName('right-content');
+        rightContent[0].style.margin = 'auto'
+    }
+    right();
+
+    let mainColor = () => {
+        let colorMain = document.getElementsByClassName('center-content');
+        let pai = colorMain[0].parentNode;
+        pai.style.backgroundColor = 'green';
+    }
+    mainColor()
+
+    let removeLasts = () => {
+        let lista = document.getElementsByTagName('ul');
+        lista[0].lastElementChild.remove();   
+        lista[0].lastElementChild.remove();     
+    }
+    removeLasts();
+</script>
+</html>
