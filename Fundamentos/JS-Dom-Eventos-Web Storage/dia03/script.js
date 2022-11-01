@@ -34,11 +34,49 @@ function criaDias(event) {
   }
 }
 criaDias();
-function botao(Feriados) {
+function botaoFeriados(Feriados) {
   let button = document.createElement('button');
   button.innerText = 'Feriados';
   button.id = 'btn-holiday';
   let buttonContainer = document.querySelector('.buttons-container');
   buttonContainer.appendChild(button);
 }
-botao()
+botaoFeriados()
+function mudaCorHoliday(event) {
+  let dias = document.getElementsByClassName('holiday');
+  for (let i in dias) {
+    dias[i].style.backgroundColor = 'pink';
+  }
+}
+function mudaCorHolidayBranca(event) {
+  let dias = document.getElementsByClassName('holiday');
+  for (let i in dias) {
+    dias[i].style.backgroundColor = 'white';
+  }
+}
+function botaoSexta(sexta) {
+  let button = document.createElement('button');
+  button.innerText = 'Sexta-feira';
+  button.id = 'btn-friday';
+  let buttonContainer = document.querySelector('.buttons-container');
+  buttonContainer.appendChild(button);
+}
+botaoSexta()
+function mudaCorSexta(event) {
+  let dias = document.getElementsByClassName('friday');
+  for (let i in dias) {
+    dias[i].style.backgroundColor = 'purple';
+  }
+}
+function mudaCorSextaBranca(event) {
+  let dias = document.getElementsByClassName('friday');
+  for (let i in dias) {
+    dias[i].style.backgroundColor = 'white';
+  }
+}
+let button = document.querySelector('#btn-holiday');
+let buttonSexta = document.querySelector('#btn-friday');
+button.addEventListener('click', mudaCorHoliday);
+button.addEventListener('dblclick', mudaCorHolidayBranca);
+buttonSexta.addEventListener('click', mudaCorSexta);
+buttonSexta.addEventListener('dblclick', mudaCorSextaBranca);
