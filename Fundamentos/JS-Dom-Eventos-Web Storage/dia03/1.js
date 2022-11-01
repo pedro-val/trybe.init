@@ -11,6 +11,7 @@ const myWebpage = document.getElementById('my-spotrybefy');
 //  - Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
 
+
 const addTech = (event) => {
     let classeTech = document.querySelector('.tech');
     classeTech.classList.remove('tech');
