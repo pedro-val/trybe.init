@@ -13,6 +13,7 @@ const createDaysOfTheWeek = () => {
 
 createDaysOfTheWeek();
 
+
 // Escreva seu código abaixo.
 function criaDias(event) {
   let tagUl = document.querySelector('.days-container');
@@ -41,19 +42,7 @@ function botaoFeriados(Feriados) {
   let buttonContainer = document.querySelector('.buttons-container');
   buttonContainer.appendChild(button);
 }
-botaoFeriados()
-function mudaCorHoliday(event) {
-  let dias = document.getElementsByClassName('holiday');
-  for (let i in dias) {
-    dias[i].style.backgroundColor = 'pink';
-  }
-}
-function mudaCorHolidayBranca(event) {
-  let dias = document.getElementsByClassName('holiday');
-  for (let i in dias) {
-    dias[i].style.backgroundColor = 'white';
-  }
-}
+botaoFeriados();
 function botaoSexta(sexta) {
   let button = document.createElement('button');
   button.innerText = 'Sexta-feira';
@@ -61,22 +50,91 @@ function botaoSexta(sexta) {
   let buttonContainer = document.querySelector('.buttons-container');
   buttonContainer.appendChild(button);
 }
-botaoSexta()
-function mudaCorSexta(event) {
-  let dias = document.getElementsByClassName('friday');
+botaoSexta();
+
+function mudaCorHoliday(event) {
+  let dias = document.getElementsByClassName('holiday')
   for (let i in dias) {
-    dias[i].style.backgroundColor = 'purple';
-  }
-}
-function mudaCorSextaBranca(event) {
-  let dias = document.getElementsByClassName('friday');
-  for (let i in dias) {
-    dias[i].style.backgroundColor = 'white';
+    if (dias[i].style.backgroundColor === 'pink') {
+      dias[i].style.backgroundColor = '';
+    } else {
+      dias[i].style.backgroundColor = 'pink';
+    }
   }
 }
 let button = document.querySelector('#btn-holiday');
-let buttonSexta = document.querySelector('#btn-friday');
 button.addEventListener('click', mudaCorHoliday);
-button.addEventListener('dblclick', mudaCorHolidayBranca);
+
+function mudaCorSexta(event) {
+  let dias = document.getElementsByClassName('friday')
+  for (let i in dias) {
+    if (dias[i].style.backgroundColor === 'blue') {
+      dias[i].style.backgroundColor = '';
+    } else {
+      dias[i].style.backgroundColor = 'blue';
+    }
+  }
+}
+let buttonSexta = document.querySelector('#btn-friday');
 buttonSexta.addEventListener('click', mudaCorSexta);
-buttonSexta.addEventListener('dblclick', mudaCorSextaBranca);
+
+
+function lupa (event) {  
+  let dias = document.getElementsByClassName('day');
+  for (let i of dias) {
+    i.addEventListener('mouseover', () => {      
+      i.style.width = '30%';
+      i.style.height = '30%';
+      i.style.transform.scale = '1.5';      
+    })     
+    i.addEventListener('mouseout', () => {      
+      i.style.width = '';
+      i.style.height = '%';
+      i.style.transform.scale = '1'; 
+    })    
+  }  
+}
+lupa();
+
+function tarefas(tarefa) {
+  let div = document.querySelector('.my-tasks');
+  let tarefa1 = document.createElement('span');
+  tarefa1.innerText = tarefa;
+  div.appendChild(tarefa1);
+}
+
+function corTarefa(cor) {
+  let div = document.querySelector('.my-tasks');
+  let novaDiv = document.createElement('div');
+  novaDiv.className = 'task';
+  novaDiv.style.backgroundColor = cor;
+  div.appendChild(novaDiv);
+}
+
+function selecionaTarefa () {
+  let task = document.getElementsByClassName('task');
+  for (let i of task) {
+    i.addEventListener('click', () => {
+      i.classList.add('selected');
+    })
+    i.addEventListener('dblclick', () => {
+      i.classList.remove('selected');
+    })
+  }
+}
+let ativaTarefas = document.querySelector('.my-tasks');
+ativaTarefas.addEventListener('mouseover', selecionaTarefa);
+
+function tarefaDoDia () {
+  let dias = document.getElementsByClassName('day');
+  for (i of dias) {
+    i.addEventListener('click', () => {            
+      i.classList.add('selected');
+    })    
+    i.addEventListener('dblclick', () => {            
+      i.classList.remove('selected');
+    })   
+  }
+}
+let ativaTarefaDoDia = document.querySelector('#days')
+ativaTarefaDoDia.addEventListener('mouseover', tarefaDoDia);
