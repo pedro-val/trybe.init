@@ -1,0 +1,25 @@
+
+.header {
+       
+}
+
+.divs {
+    padding: 5px;
+    display: inline-block;
+    border: 2px solid black;
+    margin: 30px;
+
+    
+}
+
+.main {
+    background-color: ;
+    color: ;
+    font-size: ;
+    line-height: ;
+    font-family: ;
+}
+
+.buttons {
+    display: block;
+}
