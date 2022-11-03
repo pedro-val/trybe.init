@@ -5,6 +5,22 @@ let espacamento = document.getElementById('espacamento');
 let fonte = document.getElementById('fonte');
 let main = document.getElementById('main');
 
-corFundo.addEventListener('click', () => {
+corFundo.addEventListener('click', (event) => {
+   main.style.backgroundColor = event.target.innerText;
+})
 
+corFonte.addEventListener('click', (event) => {
+    main.style.color = event.target.innerText;
+})
+
+tamanho.addEventListener('click', (event) => {
+    main.style.fontSize = event.target.innerText;
+})
+
+espacamento.addEventListener('click', (event) => {
+    main.style.lineHeight = event.target.innerText;
+})
+
+fonte.addEventListener('click', (event) => {
+    main.style.fontFamily = event.target.innerText;
 })
