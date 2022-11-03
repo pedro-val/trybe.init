@@ -79,20 +79,16 @@ let buttonSexta = document.querySelector('#btn-friday');
 buttonSexta.addEventListener('click', mudaCorSexta);
 
 
-function lupa (event) {  
-  let dias = document.getElementsByClassName('day');
-  for (let i of dias) {
-    i.addEventListener('mouseover', () => {      
-      i.style.width = '30%';
-      i.style.height = '30%';
-      i.style.transform.scale = '1.5';      
+function lupa () {  
+    let div = document.querySelector('#days');
+    div.addEventListener('mouseover', (event) => {      
+      event.target.style.fontSize = '50px';    
+      event.target.style.fontWeight = '600';
     })     
-    i.addEventListener('mouseout', () => {      
-      i.style.width = '';
-      i.style.height = '%';
-      i.style.transform.scale = '1'; 
+    div.addEventListener('mouseout', (event) => {      
+      event.target.style.fontSize = '20px';
+      event.target.style.fontWeight = '200'; 
     })    
-  }  
 }
 lupa();
 
@@ -127,14 +123,30 @@ ativaTarefas.addEventListener('mouseover', selecionaTarefa);
 
 function tarefaDoDia () {
   let dias = document.getElementsByClassName('day');
-  for (i of dias) {
-    i.addEventListener('click', () => {            
-      i.classList.add('selected');
+  for (let i = 0; i < dias.length; i++) {
+    dias[i].addEventListener('click', () => {            
+      dias[i].classList.add('selected');
+      dias[i].style.backgroundColor = document.querySelectorAll('.task.selected')[0].style.backgroundColor;
     })    
-    i.addEventListener('dblclick', () => {            
-      i.classList.remove('selected');
+    dias[i].addEventListener('dblclick', () => {            
+      dias[i].classList.remove('selected');
+      dias[i].style.backgroundColor = '';
     })   
   }
 }
-let ativaTarefaDoDia = document.querySelector('#days')
-ativaTarefaDoDia.addEventListener('mouseover', tarefaDoDia);
+tarefaDoDia();
+
+function adicionaCompromissos () {
+  let divCompromissos = document.querySelectorAll('div.input-container h3');
+  let input = document.getElementById('task-input');
+  let botaoAdicionar = document.getElementById('btn-add');
+      if (input.value == '') {
+      alert('erro ao clicar em “ADICIONAR”');
+    }
+  let novoH2 = document.createElement('h2');
+  novoH2.innerText = input.value;
+  divCompromissos[0].appendChild(novoH2);
+  input.value = '';
+}
+let botaoAdicionar = document.getElementById('btn-add');
+botaoAdicionar.addEventListener('click', adicionaCompromissos);
