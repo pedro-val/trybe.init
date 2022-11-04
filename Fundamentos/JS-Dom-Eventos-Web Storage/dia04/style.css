@@ -2,26 +2,23 @@
 .header {
     width: fit-content;
     position: relative;
-    
+    display: flex;
+    position: relative;
+    border: 2px solid black;
+    min-width: 100%;
+    align-content: center;
+    flex-direction: row; 
+    justify-content: space-evenly
 }
 
 .divs {
-
+    display: flex;
+    position: relative;
     padding: 5px;
     display: inline-block;
     border: 2px solid black;
-    margin: 30px;
-
-    
+    margin: 30px;    
 }
-
-/* .main {
-    background-color: ,
-    color: ,
-    font-size: ,
-    line-height: ,
-    font-family: ,
-} */
 
 .buttons {
     display: block;
