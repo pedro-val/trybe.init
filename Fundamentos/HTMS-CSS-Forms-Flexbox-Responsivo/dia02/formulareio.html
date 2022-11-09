@@ -3,57 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>Document</title>
 </head>
 <body>
-    <header>FORMULÁRIO EXERCÍCIO</header>
+    <header>
+        <h1>FORMULÁRIO EXERCÍCIO</h1>
+    </header>
     <main>
-        <form id="form">
-            <label for="name">None:
+        <form class="container-fluid" id="form">
+            <label class="form-control" for="name">None:
                 <input id="name" type="text" name="nome" minlength="10" maxlength="40" placeholder="Nome Completo" required> 
             </label>
             <br>
-            <label for="mail">Email:
+            <label class="form-control" for="mail">Email:
                 <input id="mail" type="email" name="email" minlength="10" maxlength="50" placeholder="E-mail atual" required>
             </label>
             <br>
-            <label for="city">Destino Preferido: <br>          
+            <label class="form-control" for="city">Destino Preferido: <br>          
                 <input id="city" type="radio" name="destino">Metrópoles
             </label>
             <br>
-            <label for="campo">
+            <label class="form-control" for="campo">
                 <input id="campo" type="radio" name="destino">Campo
             </label>
             <br>
-            <label for="praia">
+            <label class="form-control" for="praia">
                 <input id="praia" type="radio" name="destino">Praia
             </label>
             <br>
-            <label for="serra">
+            <label class="form-control" for="serra">
                 <input id="serra" type="radio" name="destino">Montanhas/Serras
             </label>
             <br>
-            <label id="labelPergunta" for="frase">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?<br>
-                <textarea name="frase" id="frase" cols="30" rows="10" minlength="10" maxlength="500" placeholder="Digite aqui sua resposta!"></textarea>
+            <label class="form-control" id="labelPergunta" for="frase">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?<br>
+                <textarea class="form-control" name="frase" id="frase" cols="30" rows="10" minlength="10" maxlength="500" placeholder="Digite aqui sua resposta!"></textarea>
             </label>
             <br>
-            <label for="data">Qual a melhor data para a realização da viagem?<br>
+            <label class="form-control" for="data">Qual a melhor data para a realização da viagem?<br>
                 <input type="date" name="data" id="data">
             </label>
             <br>
-            <label for="check">
-                <input type="checkbox" name="check" id="check">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+            <label class="form-control" for="check">
+                <input class="form-check-input" type="checkbox" name="check" id="check">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
             </label>
             <br>
-            <label for="terms">
-                <input required type="checkbox" name="terms" id="terms">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+            <label class="form-control" for="terms">
+                <input class="form-check-input" required type="checkbox" name="terms" id="terms">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
             </label>
             <br>
-            <button id="clear">Limpar formulário</button>
+            <button class="btn btn-light" id="clear">Limpar formulário</button>
             <br>
-            <button id="submit" type="submit">Enviar dados!</button>
+            <button id="submit" class="btn btn-primary" type="submit">Enviar dados!</button>
         </form>
     </main>
 </body>
