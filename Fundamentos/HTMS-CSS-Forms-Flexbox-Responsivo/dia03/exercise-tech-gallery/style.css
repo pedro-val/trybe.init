@@ -39,16 +39,23 @@ hr {
   margin: 10px auto;
 }
 
-.gallery-img {
+div {
   background-color: rgb(189, 196, 179);
   margin: 5px 5px;
   border-radius: 20px;
+
+}
+
+.gallery-img {
+  padding: 10px;
   width: 80%;
   height: 80%;  
 }
 
 h4 {
   text-align: center;
+  padding: 5px;
+
 }
 
 footer {
