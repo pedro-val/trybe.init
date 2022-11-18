@@ -57,3 +57,11 @@ const lesson1 = {
     const valorChave = Object.values(obj);
     return console.log(valorChave[position]);
   }
+
+function verifyPair(obj, key, value) {
+    if (obj[key] && obj[key] === value) {
+        console.log('deu certo');
+    } else {
+        console.log('deu errado');
+    }
+}
