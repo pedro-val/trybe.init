@@ -55,13 +55,14 @@ const lesson1 = {
   
   function getValueByNumber (obj, position) {
     const valorChave = Object.values(obj);
-    return console.log(valorChave[position]);
+    return (valorChave[position]);
   }
 
 function verifyPair(obj, key, value) {
     if (obj[key] && obj[key] === value) {
-        console.log('deu certo');
+        return console.log('deu certo');
     } else {
-        console.log('deu errado');
+        return console.log('deu errado');
     }
 }
+module.exports = getValueByNumber;
