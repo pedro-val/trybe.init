@@ -15,27 +15,30 @@
   <button id='button'>Somar</button>
   <p id='result'></p>
   <script>
+
+    const v1 = document.getElementById('value1');
+    const v2 = document.getElementById('value2');
+    const results = document.getElementById('result');
+
     function verificacaoNumerica(n1, n2) {
-      if ( !n1|| !n2 ) {
+      if ( !n1 || !n2 ) {
         throw new Error('Insira valores núméricos');
       }
     }
     function sum() {
         try {
-            const value1 = Number(document.getElementById('value1').value);
-            const value2 = Number(document.getElementById('value2').value);
+            const value1 = Number(v1.value);
+            const value2 = Number(v2.value);
             verificacaoNumerica(value1, value2);
             const result = value1 + value2;
-            document.getElementById('result').innerText = `Resultado: ${result}`;
+            results.innerText = `Resultado: ${result}`;
         }
         catch (event) {
-            document.getElementById('result').innerText = `${event.message}`;
-            
-            
+          result.innerText = `${event.message}`;            
         }
         finally {
-            document.getElementById('value1').value = '';
-            document.getElementById('value2').value = '';
+            v1.value = '';
+            v2.value = '';
             }
     }
 
