@@ -6,11 +6,7 @@ let info = {
   };
   
   const printMessage = (characterInfo) => {
-    if (characterInfo.personagem !== undefined){
     return ('Boas vindas, ' + characterInfo.personagem);
-    } else {
-        throw new Error('Não existe propriedade personagem');
-    }
   };
   
   

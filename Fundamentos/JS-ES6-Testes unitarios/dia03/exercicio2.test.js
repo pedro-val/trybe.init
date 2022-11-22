@@ -4,11 +4,15 @@ test('veririca se existe a chave personagem', () => {
     expect(printMessage(info)).toBe('Boas vindas, Margarida')
 });
 
-test('veririca se existe a chave personagem', () => {
-    try {
-        printMessage('asd');
-    }
-    catch (e) {
-        expect(e.message).toBe('Não existe propriedade personagem');
-    }    
+test('verifica chave', () => {
+    expect(info).toHaveProperty('personagem');
+});
+
+describe('verifica presença da sentença Boas vindas', () => {
+    it('verifica se existe dentro do return', () => {
+        expect(printMessage(info)).toMatch(new RegExp('Boas vindas,'));
+    });
+    it('verifica no retorno normal', () => {
+        expect(printMessage(info)).toMatch('Boas vindas,');
+    });    
 });
