@@ -29,4 +29,12 @@ describe('a função createItem', () => {
     it('Lança um erro se o preço é zero', () => {
         expect(() => createItem('Pedro', 'Camisa', 0, 20)).toThrow(Error);
     });
+    it('Lança um erro se a quantidade é undefined', () => {
+        expect(createItem('Pedro', 'Camisa', 20)).toEqual({
+            name: 'Pedro',
+            quantity: 0,
+            unit: 'Camisa',
+            price: 20,
+            });
+    });
   });
