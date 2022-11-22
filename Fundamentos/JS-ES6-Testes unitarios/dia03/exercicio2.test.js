@@ -16,3 +16,7 @@ describe('verifica presença da sentença Boas vindas', () => {
         expect(printMessage(info)).toMatch('Boas vindas,');
     });    
 });
+
+test('verificação de erro caso input invalido', () => {
+    expect(() => printMessage('info')).toThrow(Error);
+});

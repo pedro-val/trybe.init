@@ -1,4 +1,4 @@
-// printMessage.js
+
 let info = {
     personagem: 'Margarida',
     origem: 'Pato Donald',
@@ -6,8 +6,12 @@ let info = {
   };
   
   const printMessage = (characterInfo) => {
-    return ('Boas vindas, ' + characterInfo.personagem);
+    if (!characterInfo || characterInfo.personagem === undefined) {
+      throw new Error('objeto inválido');
+    }
+    return ('Boas vindas, '+ characterInfo.personagem);
   };
-  
-  
+    
   module.exports = { info, printMessage };
+  
+  
