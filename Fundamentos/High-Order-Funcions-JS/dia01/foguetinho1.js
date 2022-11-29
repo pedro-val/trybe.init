@@ -80,3 +80,5 @@ const book26Chars = books.find((event) => {
 })
 
 const verifyCentury = books.every((event) => (event.author.birthYear >= 1991 && event.author.birthYear <= 2000));
+
+const verifyDecade = books.some((event) => event.releaseYear >= 1980 && event.releaseYear < 1990);
