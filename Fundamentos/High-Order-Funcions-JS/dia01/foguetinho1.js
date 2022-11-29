@@ -78,3 +78,5 @@ const menorNome = books.forEach((event) => {
 const book26Chars = books.find((event) => {
     return event.name.length === 26;
 })
+
+const verifyCentury = books.every((event) => (event.author.birthYear >= 1991 && event.author.birthYear <= 2000));
