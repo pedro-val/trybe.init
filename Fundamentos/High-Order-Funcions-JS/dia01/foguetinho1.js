@@ -67,12 +67,17 @@ const books = [
   })
 
 
-let minorTitle = books[0].name;
-const menorNome = books.forEach((event) => {    
-    if (event.name.length < minorTitle.length) {
-        minorTitle = event.name;
-    }    
-})
+
+const menorNome = () => {
+    let minorTitle = books[0].name;
+    books.forEach((event) => {           
+        if (event.name.length < minorTitle.length) {
+            minorTitle = event.name;
+        }
+    });
+    return minorTitle;
+}
+console.log(menorNome());
 
 
 const book26Chars = books.find((event) => {
@@ -82,3 +87,4 @@ const book26Chars = books.find((event) => {
 const verifyCentury = books.every((event) => (event.author.birthYear >= 1991 && event.author.birthYear <= 2000));
 
 const verifyDecade = books.some((event) => event.releaseYear >= 1980 && event.releaseYear < 1990);
+
