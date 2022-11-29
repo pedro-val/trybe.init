@@ -73,4 +73,8 @@ const menorNome = books.forEach((event) => {
         minorTitle = event.name;
     }    
 })
-console.log(minorTitle)
+
+
+const book26Chars = books.find((event) => {
+    return event.name.length === 26;
+})
