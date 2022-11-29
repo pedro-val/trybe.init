@@ -10,7 +10,10 @@ const people = [
     { name: 'Bruna', age: 21 },
   ];
   
-const verifyAges = (arr, idade) => arr.every((num) => num.age > idade);
+const verifyAges = (arr, idade) => arr.every((num) => {
+    return num.age > idade;
+
+}) 
   
   console.log(verifyAges(people, 18));
   console.log(verifyAges(people, 14));
