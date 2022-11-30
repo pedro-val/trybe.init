@@ -8,6 +8,18 @@ const people = [
   
   people.sort((a, b) => a.age - b.age);
   people.sort((a, b) => a.name > b.name ? 1 : -1);
-  // Adicione seu código aqui
-  
-  console.log(people);
+
+
+
+
+  function descendingOrder(n){
+    if (n === undefined) {
+      n = '0';
+    }
+    const array = JSON.stringify(n).split('');
+    array.sort((a,b) => b - a);
+    let resultado = '';
+    array.forEach((num) => resultado += num)
+    return resultado;
+  }
+  console.log(descendingOrder(123456789))
