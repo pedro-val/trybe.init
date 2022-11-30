@@ -29,8 +29,8 @@ const mage = {
   };
 
   const battleMembers = { mage, warrior, dragon };
-  
-  const gameActions = {
+
+    const gameActions = {
     warriorTurn: ((danoWarrior) => dragon.healthPoints = dragon.healthPoints - warrior.damage()),
     mageTurn: ((danoMage) => {
         dragon.healthPoints = dragon.healthPoints - mage.damage().dano;
@@ -41,12 +41,4 @@ const mage = {
         warrior.healthPoints = warrior.healthPoints - dDramage;
         mage.healthPoints = mage.healthPoints - dDramage;
     }),
-    turnResult: ((resultadoDoTurno) => battleMembers),
   };
-
-  gameActions.warriorTurn()
-  console.log(battleMembers)
-  gameActions.mageTurn()
-  console.log(battleMembers)
-  gameActions.dragonTurn()
-  console.log(battleMembers)
