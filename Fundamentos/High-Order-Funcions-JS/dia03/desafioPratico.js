@@ -75,3 +75,13 @@ const countries = [
     }), 0);
     return retorno;
    }
+
+   const getTotalArea = (array) => {
+    const retorno = array.reduce(((acum, countrie) => {
+        acum = acum + countrie.area;
+        return acum;
+    }), 0);
+    return retorno;
+    }
+
+    
