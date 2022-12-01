@@ -96,3 +96,19 @@ const countries = [
         return retorno;
       }
 
+      const countA = (array) => {
+        // retorne seu código aqui
+        let contador = 0
+        const arrayNomes = array.map((element) => element.name);
+        const lowerCase = arrayNomes.map((element) => element.toLowerCase());
+        const contandoLetras = lowerCase.forEach((element) => {
+            const splitter = element.split('');
+            const contando = splitter.forEach((element) => {
+                if (element === 'a') {
+                    contador += 1;
+                }
+            });
+        });
+        return contador;
+      }
+      console.log(countA(countries))
