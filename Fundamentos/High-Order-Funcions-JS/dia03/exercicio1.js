@@ -73,6 +73,16 @@ const books = [
     return orderList;
   }
 
+  const booksByAuthorBirthYear = (birthYear) => {
+    let retorno = [];
+    const engine = books.forEach((livro) => {
+        if (livro.author.birthYear === birthYear) {
+            retorno.push(livro.name);
+        }
+    })
+    return retorno;
+  }
+
 
 
 
