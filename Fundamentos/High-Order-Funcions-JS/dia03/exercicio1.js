@@ -94,4 +94,21 @@ const books = [
     return retorno
   }
 
+  const oldBooks = (array) => {
+    const novaData = new Date;
+    const anoAtual = novaData.getFullYear();
+    const retorno = array.reduce(((acum, book) => {
+        if (anoAtual - book.releaseYear > 60) {
+            acum.push(book.name);
+        }
+        return acum;
+    }), []);
+    return retorno;
+  }
 
+  const authorWith3DotsOnName = (array) => {
+    // escreva seu código aqui
+    const retorno = array.reduce(((acum, book) => {
+        
+    }), '');
+  }
