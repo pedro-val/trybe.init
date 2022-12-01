@@ -84,4 +84,15 @@ const countries = [
     return retorno;
     }
 
-    
+    const longestName = (array) => {
+        const retorno = array.reduce(((acum, countrie) => {
+            if (acum.name.length < countrie.name.length) {
+                acum = countrie;
+                return acum;
+            } else {
+                return acum;
+            }
+        }));
+        return retorno;
+      }
+
