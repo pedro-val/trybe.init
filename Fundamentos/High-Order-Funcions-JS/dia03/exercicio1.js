@@ -83,6 +83,15 @@ const books = [
     return retorno;
   }
 
-
+  const fantasyOrScienceFictionAuthors = (array) => {
+    // escreva seu código aqui
+    const retorno = array.reduce(((acum, book) => {
+        if (book.genre === 'Fantasia' || book.genre === 'Ficção Científica') {
+            acum.push(book.author.name);
+        }
+        return acum.sort()
+    }), []);
+    return retorno
+  }
 
 
