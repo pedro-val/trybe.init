@@ -76,11 +76,7 @@ const estudantes = [
   const melhorMateria = estudantes.map((student) => ({
     name: student.nome,
     materia: student.materias.reduce((acc, materia) => {
-        if(acc.nota > materia.nota) {
-            return acc;
-        } else {
-            return materia;
-        }
+       return acc.nota > materia.nota ? acc : materia;
     }).name
   }));
   console.log(melhorMateria);
