@@ -111,4 +111,17 @@ const countries = [
         });
         return contador;
       }
-      console.log(countA(countries))
+
+      const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
+      const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
+      
+      const studentAverage = (estudantes, notas) => {
+        const retorno = {};
+        students.forEach((estudante) => retorno.name = estudante);
+        grades.forEach((nota) => {
+            let mediaDoAluno = 0;
+            return nota.forEach((media) => {
+                
+            });
+        })
+      }

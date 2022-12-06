@@ -109,6 +109,7 @@ const books = [
   const authorWith3DotsOnName = (array) => {
     // escreva seu código aqui
     const retorno = array.reduce(((acum, book) => {
-        
+
     }), '');
   }
+
