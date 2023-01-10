@@ -9,4 +9,5 @@ const text = document.getElementById('text');
 button.addEventListener('click', () => {
     text.innerText = nanoid();
     copy(`${text.innerText}`);
+    alert('Senha copiada!');
 });
