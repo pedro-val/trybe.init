@@ -33,6 +33,6 @@ usersSelect.addEventListener('change', () => {
     fillPosts(user.posts);
     fetch(`https://dummyjson.com/posts/${user.posts[0].id}/comments`).then((data) => data.json().then((coment) => {
       fillFeaturedPostComments(coment.comments);
-    })).catch((erro) => fillErrorMessage(error.message))
+    })).catch((erro) => fillErrorMessage(erro.message))
   }))
 });
