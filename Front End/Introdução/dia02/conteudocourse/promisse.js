@@ -12,7 +12,7 @@ const promisses = () => {
 }
 
 promisses().then((response) => {
-    console.log(response)
+    console.log(`Número válido ${response}`)
 })
 .catch((error) => {
     console.log(error.message)
