@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "node-fetch": "^3.3.0",
+    "vite": "^4.0.4"
+  },
+  "name": "dia02",
+  "version": "1.0.0",
+  "main": "metodofetch.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "vite --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
