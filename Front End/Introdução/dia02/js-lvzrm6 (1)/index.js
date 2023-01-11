@@ -11,10 +11,28 @@ import {
 const usersSelect = document.querySelector('#users-select');
 
 const USERS_API = 'https://dummyjson.com/users';
-// faça a lógica para pegar as informações das pessoas usuárias e preencher o select aqui.
+
+const users = () => fetch(USERS_API).then((data) => data.json().then((info) => {
+  fillUsersSelect(info.users);
+  // info.users.forEach((user) => {
+  //   const newOption = document.createElement('option');
+  //   newOption.innerText = `${user.firstName} ${user.lastName}`;
+  //   usersSelect.appendChild(newOption);
+  // })
+}))
+users();
+
+const captureValue = () => {
+    const selectedArea = usersSelect.options[usersSelect.selectedIndex];
+    return selectedArea.value;
+};
 
 usersSelect.addEventListener('change', () => {
   clearPageData();
-
-  // faça a lógica para pegar as informações dos posts da pessoa selecionada e dos comentários do post destacado aqui.
+  fetch(`https://dummyjson.com/posts/user/${captureValue()}`).then((data) => data.json().then((user) => {
+    fillPosts(user.posts);
+    fetch(`https://dummyjson.com/posts/${user.posts[0].id}/comments`).then((data) => data.json().then((coment) => {
+      fillFeaturedPostComments(coment.comments);
+    })).catch((erro) => fillErrorMessage(error.message))
+  }))
 });
