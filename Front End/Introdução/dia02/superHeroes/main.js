@@ -19,7 +19,8 @@ const getRandonHero = (event) => {
         }))
     }
     errorMessage('Erro! Tente outra vez!')
-    imagem.src = ''; 
+    imagem.src = 'http://www.blogdogasparetto.com.br/wp-content/uploads/2013/04/falha_gestao_2.jpg';
+    event.preventDefault();    
 }
 
 botao.addEventListener('click', () => getRandonHero());
