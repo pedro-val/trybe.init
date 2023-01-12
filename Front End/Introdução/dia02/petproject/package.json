@@ -1,0 +1,16 @@
+{
+  "name": "petproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^4.0.4"
+  },
+  "type": "module"  
+}
