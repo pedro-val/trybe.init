@@ -9,18 +9,17 @@ function errorMessage(errorMessage) {
 }
 
 const getRandonHero = (event) => {
-    const idNumber = Math.round(Math.random() * 1000);
-    if (idNumber <= 731){
+    const idNumber = Math.round(Math.random() * 1000); 
     fetch(`https://www.superheroapi.com/api.php/6767071873319305/${idNumber}`)
       .then((data) => data.json()
         .then((info) => {
             tagName.innerText = info.name;
             imagem.src = info.image.url;
-        }))
-    }
-    errorMessage('Erro! Tente outra vez!')
-    imagem.src = 'http://www.blogdogasparetto.com.br/wp-content/uploads/2013/04/falha_gestao_2.jpg';
-    event.preventDefault();
+        })).catch((erro) => {
+          errorMessage('Erro! Tente outra vez!')
+          imagem.src = 'http://www.blogdogasparetto.com.br/wp-content/uploads/2013/04/falha_gestao_2.jpg';
+          alert('Numero de herói nao encontrado.')
+        })
 }
 
 botao.addEventListener('click', () => getRandonHero());
