@@ -9,8 +9,8 @@ function errorMessage(errorMessage) {
 }
 
 const getRandonHero = (event) => {
-    const idNumber = Math.round(Math.random() * 750);
-    if (idNumber <= 500){
+    const idNumber = Math.round(Math.random() * 1000);
+    if (idNumber <= 731){
     fetch(`https://www.superheroapi.com/api.php/6767071873319305/${idNumber}`)
       .then((data) => data.json()
         .then((info) => {
